@@ -1,0 +1,538 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0A192F;
+    color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Clases de Colores */
+.highlight {
+    color: #FFD700;
+}
+
+.highlight-blue {
+    color: #1D4ED8;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0A192F;
+}
+
+.header-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.header-content .subtitle {
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #FFFFFF20;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border: none;
+}
+
+/* Sección de Beneficios */
+.benefits {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    color: #FFD700;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.benefits-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF10;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+}
+
+.card h3 {
+    color: #FFD700;
+    margin: 10px 0;
+}
+
+.benefits-details {
+    margin-top: 40px;
+}
+
+.benefit-detail {
+    background-color: #FFFFFF10;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.benefit-detail h3 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Sección de Oferta y CTA */
+.offer {
+    background-color: #1D4ED8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.price-box {
+    display: inline-block;
+    background-color: #1D4ED8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.old-price {
+    font-size: 24px;
+    text-decoration: line-through;
+    color: #FFFFFF;
+}
+
+.new-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    background-color: #39FF14;
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #32CD32;
+}
+
+.secure-purchase {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* Sección de Presentación del Curso */
+.course-intro {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.course-intro h2 {
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.course-intro p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.course-image {
+    margin-top: 20px;
+}
+
+.course-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #39FF14;
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #32CD32;
+}
+
+.btn-highlight {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.btn-highlight:hover {
+    background-color: #FFC000;
+}
+
+/* Sección de Contenido del Curso */
+.course-content {
+    background-color: #FFD700;
+    padding: 40px 20px;
+    text-align: center;
+    color: #0A192F;
+}
+
+.course-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content-list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-list h3 {
+    color: #FFD700;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.content-list ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.prices {
+    margin-top: 30px;
+}
+
+.prices .old-price {
+    font-size: 24px;
+    text-decoration: line-through;
+    color: #0A192F;
+}
+
+.prices .new-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0A192F;
+    margin: 10px 0;
+}
+
+/* Sección de Certificado */
+.certificate {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.certificate h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.certificate p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.certificate img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+}
+
+/* Sección de Testimonios */
+.testimonials {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    color: #1E2A38;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    width: 300px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #7E57C2;
+}
+
+.testimonial blockquote {
+    margin: 20px 0;
+    font-style: italic;
+    color: #555555;
+}
+
+.user-name {
+    font-weight: bold;
+    background-color: #FFD700;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Sección de Bonos */
+.bonuses {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.bonuses h2 {
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.bonuses-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bonus-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bonus-card img {
+    width: 60px;
+    height: 60px;
+}
+
+.bonus-card h3 {
+    color: #0A192F;
+    margin-top: 10px;
+}
+
+/* Sección del Instructor */
+.instructor {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.instructor-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.instructor-content h2 {
+    background-color: #FFD700;
+    color: #000000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.instructor-content h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.instructor-content p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.instructor-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.instructor-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.instructor-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+}
+
+/* Sección de Argumentos */
+.arguments {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    color: #FFFFFF;
+}
+
+.arguments h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.arguments p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.arguments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.arguments li {
+    margin-bottom: 20px;
+}
+
+.arguments li strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #FFD700;
+}
+
+/* Sección de Preguntas Frecuentes */
+.faq {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    color: #FFFFFF;
+}
+
+.faq h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    background-color: #4B41FF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-item p {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Sección Final de Oferta */
+.final-offer {
+    background-color: #0A192F;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final-offer .prices {
+    margin-top: 20px;
+}
+
+.final-offer .old-price {
+    font-size: 24px;
+    text-decoration: line-through;
+    color: #FFFFFF;
+}
+
+.final-offer .new-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .benefits-cards, .testimonials-container, .bonuses-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructor {
+        flex-direction: column;
+    }
+
+    .instructor-content, .instructor-image {
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
