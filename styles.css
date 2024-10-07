@@ -1,451 +1,496 @@
-/* Estilos Generales */
+/* Estilos generales */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0A192F;
-    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4 {
     margin: 0;
 }
 
-p {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Clases de Colores */
-.highlight {
-    color: #FFD700;
-}
-
-.highlight-blue {
-    color: #1D4ED8;
-}
-
-/* Header */
+/* Encabezado */
 .header {
-    text-align: center;
+    background-color: #77b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-content {
+    background-color: #fff; /* Fondo blanco para el contenido del encabezado */
     padding: 20px;
-    background-color: #0A192F;
+    text-align: center;
+    color: #333;
 }
 
-.header-content h1 {
-    font-size: 32px;
-    line-height: 1.2;
+.header h1 {
+    font-size: 1.8em;
 }
 
-.header-content .subtitle {
-    font-size: 20px;
-    color: #FFFFFF;
-    background-color: #FFFFFF20;
-    padding: 10px;
+.header .highlight {
+    color: #ffcc00;
+}
+
+.header .highlight-blue {
+    color: #77b;
+}
+
+.subtitle {
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
 .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
     margin-top: 20px;
+    border: 2px solid #fff;
 }
 
 .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 720px;
-    height: auto;
-    border: none;
+    height: 100%;
 }
 
-/* Sección de Beneficios */
-.benefits {
-    background-color: #0A192F;
-    padding: 40px 20px;
+
+/* Secciones */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.benefits h2 {
-    color: #FFD700;
-    font-size: 28px;
-    margin-bottom: 30px;
+section h2 .highlight {
+    color: #ffcc00;
 }
 
-.benefits-cards {
+section h2 .highlight-blue {
+    color: #77b;
+}
+
+/* Beneficios */
+#beneficios {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: #fff;
+}
+
+#beneficios .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .card {
-    background-color: #FFFFFF10;
+    background-color: #fff;
+    width: 22%;
+    margin-bottom: 20px;
     padding: 20px;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #333;
+    position: relative;
 }
 
-.card img {
-    width: 60px;
-    height: 60px;
+.card .icon {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+.card-content {
+    margin-top: 60px;
 }
 
 .card h3 {
-    color: #FFD700;
-    margin: 10px 0;
+    color: #ffcc00; /* Título en amarillo */
+    margin-top: 10px;
+    text-align: center;
 }
 
-.benefits-details {
-    margin-top: 40px;
+.card h4 {
+    color: #003366; /* Subtítulo en azul oscuro */
+    margin-top: 10px;
+    text-align: center;
 }
 
-.benefit-detail {
-    background-color: #FFFFFF10;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-.benefit-detail h3 {
-    color: #FFD700;
+.card ul li {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+    color: #003366; /* Texto en azul oscuro */
+}
+
+.card ul li img {
+    margin-right: 10px;
 }
 
 /* Sección de Oferta y CTA */
 .offer {
-    background-color: #1D4ED8;
-    padding: 40px 20px;
     text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
 }
 
 .price-box {
     display: inline-block;
-    background-color: #1D4ED8;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
 }
 
-.old-price {
-    font-size: 24px;
-    text-decoration: line-through;
-    color: #FFFFFF;
+.old-price, .new-price {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
-.new-price {
-    font-size: 32px;
+.old-price span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price span {
+    color: #ff0000;
     font-weight: bold;
-    color: #FFFFFF;
-    margin: 10px 0;
 }
 
 .btn-buy {
     display: inline-block;
-    background-color: #39FF14;
-    color: #000000;
+    background-color: #448;
+    color: #fff;
     padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
 }
 
 .btn-buy:hover {
-    background-color: #32CD32;
+    background-color: #336;
 }
 
 .secure-purchase {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.offer .soporte {
     margin-top: 10px;
-    font-size: 14px;
-    color: #FFFFFF;
+}
+
+.offer .soporte a {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.offer .soporte img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 /* Sección de Presentación del Curso */
 .course-intro {
-    background-color: #0A192F;
-    padding: 40px 20px;
     text-align: center;
 }
 
 .course-intro h2 {
-    font-size: 28px;
-    line-height: 1.3;
+    font-size: 1.8em;
 }
 
 .course-intro p {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-.course-image {
-    margin-top: 20px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 .course-image img {
-    width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    border: 2px solid #FFD700;
+    margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #39FF14;
-    color: #000000;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #32CD32;
-}
-
-.btn-highlight {
-    background-color: #FFD700;
-    color: #000000;
-}
-
-.btn-highlight:hover {
-    background-color: #FFC000;
-}
-
-/* Sección de Contenido del Curso */
-.course-content {
-    background-color: #FFD700;
-    padding: 40px 20px;
-    text-align: center;
-    color: #0A192F;
-}
-
-.course-content h2 {
-    font-size: 28px;
+.course-intro .btn-buy {
     margin-bottom: 20px;
 }
 
-.content-list {
-    text-align: left;
-    max-width: 800px;
+/* Contenido del Curso */
+#contenido-curso {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: #fff;
+    padding: 60px 0;
+}
+
+#contenido-curso h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contenido-curso .contenido {
+    width: 90%;
     margin: 0 auto;
 }
 
-.content-list h3 {
-    color: #FFD700;
-    font-size: 22px;
-    margin-top: 20px;
+#contenido-curso .unidad {
+    margin-bottom: 40px;
 }
 
-.content-list ul {
-    list-style-type: disc;
-    margin-left: 20px;
+#contenido-curso h3 {
+    color: #ffcc00; /* Título "Lecciones" en amarillo */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#contenido-curso .subtitulo {
+    color: #ffcc00; /* Subtítulos en amarillo */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#contenido-curso ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#contenido-curso ul li {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+#contenido-curso .btn-highlight {
+    display: block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: fit-content;
 }
 
 .prices {
-    margin-top: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.prices .old-price {
-    font-size: 24px;
-    text-decoration: line-through;
-    color: #0A192F;
-}
-
-.prices .new-price {
-    font-size: 32px;
-    font-weight: bold;
-    color: #0A192F;
+.prices .old-price, .prices .new-price {
+    font-size: 1.5em;
     margin: 10px 0;
+}
+
+.prices .old-price span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.prices .new-price span {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#countdown-bottom {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
 }
 
 /* Sección de Certificado */
 .certificate {
-    background-color: #0A192F;
-    padding: 40px 20px;
     text-align: center;
 }
 
-.certificate h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.certificate p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 .certificate img {
-    width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
-    border: 2px solid #FFD700;
-    border-radius: 10px;
+    margin-top: 20px;
 }
 
 /* Sección de Testimonios */
 .testimonials {
-    background-color: #FFFFFF;
-    padding: 40px 20px;
-    text-align: center;
-    color: #1E2A38;
-}
-
-.testimonials h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    padding: 60px 0;
 }
 
 .testimonials-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .testimonial {
-    width: 300px;
-    background-color: #F0F0F0;
-    padding: 20px;
-    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .testimonial img {
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
-    border: 2px solid #7E57C2;
+    width: 100px;
+    height: 100px;
 }
 
 .testimonial blockquote {
-    margin: 20px 0;
     font-style: italic;
-    color: #555555;
+    margin: 20px 0;
 }
 
-.user-name {
+.testimonial .user-name {
     font-weight: bold;
-    background-color: #FFD700;
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
 }
 
-/* Sección de Bonos */
-.bonuses {
-    background-color: #000000;
-    padding: 40px 20px;
-    text-align: center;
+/* Bonos de Regalo */
+#bonos {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: #fff;
 }
 
-.bonuses h2 {
-    font-size: 28px;
-    color: #FFFFFF;
-    margin-bottom: 30px;
-}
-
-.bonuses-cards {
+#bonos .bonos-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
 }
 
-.bonus-card {
-    background-color: #FFFFFF;
-    padding: 20px;
-    width: 220px;
-    border-radius: 10px;
+.bono {
+    width: 45%;
+    margin-bottom: 20px;
     text-align: center;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-.bonus-card img {
-    width: 60px;
-    height: 60px;
+.bono img {
+    max-width: 100%;
+    height: auto;
 }
 
-.bonus-card h3 {
-    color: #0A192F;
-    margin-top: 10px;
+@media (min-width: 768px) {
+    .bono {
+        width: 22%;
+    }
+}
+
+/* CTA después de la sección de Bonos de Regalo */
+.cta-post-bonos {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.cta-post-bonos .btn-highlight {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-post-bonos .btn-highlight:hover {
+    background-color: #e6b800;
 }
 
 /* Sección del Instructor */
 .instructor {
-    background-color: #0A192F;
-    padding: 40px 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    color: #FFFFFF;
+    padding: 60px 0;
 }
 
 .instructor-content {
-    flex: 1;
-    min-width: 300px;
+    width: 60%;
 }
 
 .instructor-content h2 {
-    background-color: #FFD700;
-    color: #000000;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 1.8em;
 }
 
 .instructor-content h3 {
-    font-size: 28px;
-    margin-top: 20px;
+    font-size: 1.5em;
+    color: #003366;
+    margin-top: 10px;
 }
 
 .instructor-content p {
-    margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.1em;
+    margin: 10px 0;
 }
 
 .instructor-content ul {
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.instructor-content ul ul {
+    list-style: circle;
+    padding-left: 20px;
 }
 
 .instructor-image {
-    flex: 1;
-    min-width: 300px;
+    width: 35%;
     text-align: center;
 }
 
 .instructor-image img {
-    width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #FFD700;
 }
+
+.instructor-image .btn-highlight {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.instructor-image .btn-highlight:hover {
+    background-color: #e6b800;
+}
+
 
 /* Sección de Argumentos */
 .arguments {
-    background-color: #0A192F;
-    padding: 40px 20px;
-    color: #FFFFFF;
+    padding: 60px 0;
 }
 
 .arguments h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 1.8em;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .arguments p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 .arguments ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -454,23 +499,23 @@ a {
 }
 
 .arguments li strong {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #FFD700;
+    font-size: 1.2em;
 }
 
-/* Sección de Preguntas Frecuentes */
+.arguments li p {
+    margin-top: 5px;
+}
+
+/* Preguntas Frecuentes */
 .faq {
-    background-color: #0A192F;
-    padding: 40px 20px;
-    color: #FFFFFF;
+    background-color: #f4f4f4;
+    padding: 60px 0;
 }
 
 .faq h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 1.8em;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .faq-item {
@@ -478,61 +523,84 @@ a {
 }
 
 .faq-item h3 {
-    font-size: 22px;
-    background-color: #4B41FF;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 1.3em;
+    color: #003366;
 }
 
 .faq-item p {
-    background-color: #FFFFFF;
-    color: #000000;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 1.1em;
     margin-top: 5px;
 }
 
-/* Sección Final de Oferta */
-.final-offer {
-    background-color: #0A192F;
-    padding: 40px 20px;
+/* Pie de página */
+footer {
+    background-color: #000;
+    color: #fff;
     text-align: center;
+    padding: 20px 0;
 }
 
-.final-offer .prices {
-    margin-top: 20px;
+footer p {
+    margin: 5px 0;
 }
 
-.final-offer .old-price {
-    font-size: 24px;
-    text-decoration: line-through;
-    color: #FFFFFF;
-}
-
-.final-offer .new-price {
-    font-size: 32px;
+footer .soporte a {
+    color: #25D366;
+    text-decoration: none;
     font-weight: bold;
-    color: #FFFFFF;
-    margin: 10px 0;
 }
 
-/* Responsividad */
+footer .soporte img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Notificaciones de prueba social */
+#social-proof {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+#social-proof.show {
+    display: block;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-    .benefits-cards, .testimonials-container, .bonuses-cards {
+    /* Beneficios */
+    #beneficios .cards {
         flex-direction: column;
         align-items: center;
     }
 
+    .card {
+        width: 80%;
+    }
+
+    /* Bonos de Regalo */
+    #bonos .bonos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bono {
+        width: 80%;
+    }
+
+    /* Instructor */
     .instructor {
         flex-direction: column;
     }
 
     .instructor-content, .instructor-image {
-        max-width: 100%;
-    }
-
-    .video-container iframe {
         width: 100%;
-        height: auto;
     }
 }
