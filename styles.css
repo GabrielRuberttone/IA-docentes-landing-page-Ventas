@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #0C0E30;
 }
 
 .container {
@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
 
 /* Encabezado */
 .header {
-    background-color: #77b;
+    background-color: #0C0E30;
     color: #fff;
     padding: 20px 0;
 }
@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
     background-color: #fff; /* Fondo blanco para el contenido del encabezado */
     padding: 20px;
     text-align: center;
-    color: #333;
+    color: #000000;
 }
 
 .header h1 {
@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
 }
 
 .header .highlight-blue {
-    color: #77b;
+    color: #4B41FF;
 }
 
 .subtitle {
@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
     height: 0;
     overflow: hidden;
     margin-top: 20px;
-    border: 2px solid #fff;
+    border: 4px solid #0C0E30;
 }
 
 .video-container iframe {
@@ -85,6 +85,7 @@ section h2 .highlight-blue {
 #beneficios {
     background-color: #003366; /* Fondo azul oscuro */
     color: #fff;
+    
 }
 
 #beneficios .cards {
@@ -102,6 +103,7 @@ section h2 .highlight-blue {
     text-align: left;
     color: #333;
     position: relative;
+    border-radius: 10px;
 }
 
 .card .icon {
@@ -144,6 +146,10 @@ section h2 .highlight-blue {
 .card ul li img {
     margin-right: 10px;
 }
+.check{
+    width: 35px;
+    height: 35px;
+}
 
 /* Sección de Oferta y CTA */
 .offer {
@@ -176,8 +182,8 @@ section h2 .highlight-blue {
 
 .btn-buy {
     display: inline-block;
-    background-color: #448;
-    color: #fff;
+    background-color: #00FF66;
+    color: #000000;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -185,7 +191,7 @@ section h2 .highlight-blue {
 }
 
 .btn-buy:hover {
-    background-color: #336;
+    background-color: #ffcc00 ;
 }
 
 .secure-purchase {
@@ -198,7 +204,7 @@ section h2 .highlight-blue {
 }
 
 .offer .soporte a {
-    color: #25D366;
+    color: #00FF66;
     text-decoration: none;
     font-weight: bold;
 }
@@ -279,7 +285,7 @@ section h2 .highlight-blue {
 #contenido-curso .btn-highlight {
     display: block;
     background-color: #ffcc00;
-    color: #333;
+    color: #000000;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -400,14 +406,14 @@ section h2 .highlight-blue {
 
 .cta-post-bonos .btn-highlight {
     background-color: #ffcc00;
-    color: #333;
+    color: #000000;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta-post-bonos .btn-highlight:hover {
-    background-color: #e6b800;
+    background-color: #00FF66;
 }
 
 /* Sección del Instructor */
@@ -415,7 +421,7 @@ section h2 .highlight-blue {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 60px 0;
+    padding: 25px;
 }
 
 .instructor-content {
@@ -469,13 +475,13 @@ section h2 .highlight-blue {
 }
 
 .instructor-image .btn-highlight:hover {
-    background-color: #e6b800;
+    background-color: #00FF66;
 }
 
 
 /* Sección de Argumentos */
 .arguments {
-    padding: 60px 0;
+    padding: 25px;
 }
 
 .arguments h2 {
@@ -508,14 +514,24 @@ section h2 .highlight-blue {
 
 /* Preguntas Frecuentes */
 .faq {
-    background-color: #f4f4f4;
-    padding: 60px 0;
+    background-color: #003366;
+    padding: 25px;
+
+}
+.faq-p{
+    background-color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
 }
 
 .faq h2 {
     font-size: 1.8em;
     text-align: center;
     margin-bottom: 30px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .faq-item {
@@ -524,17 +540,18 @@ section h2 .highlight-blue {
 
 .faq-item h3 {
     font-size: 1.3em;
-    color: #003366;
+    color: #ffffff;
 }
 
 .faq-item p {
     font-size: 1.1em;
     margin-top: 5px;
+    color: #003366;
 }
 
 /* Pie de página */
 footer {
-    background-color: #000;
+    background-color: #04041f;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -559,14 +576,16 @@ footer .soporte img {
 /* Notificaciones de prueba social */
 #social-proof {
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     left: 20px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(70, 70, 69, 0.572);
     color: #fff;
-    padding: 15px;
+    padding: 12px;
     border-radius: 5px;
     display: none;
     z-index: 1000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra negra */
+
 }
 
 #social-proof.show {
@@ -598,6 +617,7 @@ footer .soporte img {
     /* Instructor */
     .instructor {
         flex-direction: column;
+
     }
 
     .instructor-content, .instructor-image {

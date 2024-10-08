@@ -34,12 +34,12 @@ function countdownTimer(elementId, endTime, duration) {
 }
 
 // Configuración del contador en la sección de oferta
-const offerStartTime = 'Oct 1, 2023 12:00:00';
+const offerStartTime = 'Oct 8, 2024 12:00:00';
 const offerDuration = 48 * 60 * 60; // 48 horas en segundos
 countdownTimer('countdown', offerStartTime, offerDuration);
 
 // Configuración del contador en la sección de contenido del curso
-const offerStartTimeBottom = 'Oct 1, 2023 12:00:00';
+const offerStartTimeBottom = 'Oct 8, 2024 12:00:00';
 const offerDurationBottom = 48 * 60 * 60; // 48 horas en segundos
 countdownTimer('countdown-bottom', offerStartTimeBottom, offerDurationBottom);
 
