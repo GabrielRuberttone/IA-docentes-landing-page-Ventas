@@ -199,6 +199,10 @@ section h2 .highlight-blue {
     color: #333;
 }
 
+.image-llamada{
+zoom: 1.5;
+
+}
 .offer .soporte {
     margin-top: 10px;
 }
@@ -214,6 +218,7 @@ section h2 .highlight-blue {
     vertical-align: middle;
     margin-right: 5px;
 }
+
 
 /* Sección de Presentación del Curso */
 .course-intro {
@@ -323,6 +328,9 @@ section h2 .highlight-blue {
 .certificate {
     text-align: center;
 }
+.image-certificado-finalizacion{
+    width: 90%;
+}
 
 .certificate img {
     max-width: 100%;
@@ -367,6 +375,11 @@ section h2 .highlight-blue {
 #bonos {
     background-color: #003366; /* Fondo azul oscuro */
     color: #fff;
+}
+
+.image-bono1{
+    width: 100px;
+    height: 100px;
 }
 
 #bonos .bonos-grid {
