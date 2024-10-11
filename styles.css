@@ -1,8 +1,9 @@
-/* Estilos generales */
+/* Estilos Generales */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #0C0E30;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0A192F;
+    color: #FFFFFF;
 }
 
 .container {
@@ -14,157 +15,251 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
-/* Encabezado */
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Clases de Colores */
+.highlight {
+    color: #FFD700; /* Dorado */
+}
+
+.highlight-blue {
+    color: #1D4ED8; /* Azul intenso */
+}
+
+/* Header */
 .header {
-    background-color: #0C0E30;
-    color: #fff;
-    padding: 20px 0;
+    border-top: 20px solid #0A192F;
+    text-align: center;
+    background-color: #0A192F; /* Fondo principal de la sección superior */
 }
 
 .header-content {
-    background-color: #fff; /* Fondo blanco para el contenido del encabezado */
-    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco para el área del H1 y subtítulo */
     text-align: center;
-    color: #000000;
 }
 
 .header h1 {
-    font-size: 1.8em;
-}
-
-.header .highlight {
-    color: #ffcc00;
-}
-
-.header .highlight-blue {
-    color: #4B41FF;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #000000; /* Color negro para el texto principal del H1 */
+    padding: 20px;
+    display: inline-block;
+    margin: 0; /* Asegura que no haya márgenes adicionales */
 }
 
 .subtitle {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 20px;
+    color: #000000; /* Color negro para el subtítulo */
+    padding: 10px;
+    font-weight: 450;
+    /* margin-top: 10px; */
+    /* background-color: transparent; Mantén transparente el fondo del subtítulo */
 }
 
+/* Video */
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    margin-top: 20px;
-    border: 4px solid #0C0E30;
+    width: 100%; /* Mantiene el ancho completo */
+    max-width: 720px; /* Limita el ancho en pantallas más grandes */
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: #0A192F; /* Fondo azul oscuro en el contenedor del video */
+    /* border-top: 20px solid #0A192F; */
+    /* padding: 10px; Añadí padding para ajustar el espacio alrededor */
+    
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Ancho completo */
+    aspect-ratio: 16 / 9; /* Mantener proporción 16:9 */
+    border: none; /* Elimina bordes */
 }
-
 
 /* Secciones */
 section {
-    padding: 60px 0;
+    padding: 60px 20px;
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 28px;
+    color: #FFD700;
 }
 
-section h2 .highlight {
-    color: #ffcc00;
-}
-
-section h2 .highlight-blue {
-    color: #77b;
+section h3 {
+    font-size: 22px;
+    color: #FFD700;
 }
 
 /* Beneficios */
 #beneficios {
-    background-color: #003366; /* Fondo azul oscuro */
-    color: #fff;
-    
+    background-color: #0A192F;
+    padding: 40px 20px;
+    border-top: 10px solid #ffffff;
+}
+
+#beneficios h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 28px;
+    color: #FFD700;
 }
 
 #beneficios .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
-.card {
-    background-color: #fff;
-    width: 22%;
-    margin-bottom: 20px;
+#beneficios .card {
+    background-color: #FFFFFF;
+    color: #0A192F;
     padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
-    color: #333;
-    position: relative;
+    width: 220px;
+    text-align: left; /* Alineación izquierda para el contenido */
     border-radius: 10px;
+    position: relative;
 }
 
-.card .icon {
+#beneficios .icon-container {
     position: absolute;
-    top: -40px;
+    top: -50px; /* Elevar para que quede fuera de la card */
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-content {
-    margin-top: 60px;
+.check {
+    width: 40px;
+    height: 40px;
 }
 
-.card h3 {
-    color: #ffcc00; /* Título en amarillo */
-    margin-top: 10px;
+#beneficios .icon {
+    background-color: #0A192F;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Sombra negra para resaltar */
+}
+
+.beneficios-list {
+    list-style: none;
+}
+
+#beneficios .icon-text {
+    color: #ffffff; /* Color blanco para el texto */
+    font-size: 14px;
     text-align: center;
+    margin-top: 5px;
 }
 
-.card h4 {
-    color: #003366; /* Subtítulo en azul oscuro */
+
+#beneficios .card .card-content {
+    margin-top: 50px; /* Ajustar el margen para dar espacio al ícono */
+}
+
+#beneficios .card h3 {
+    color: #FFD700;
     margin-top: 10px;
-    text-align: center;
+    text-align: left; /* Alinear el título principal de cada card a la izquierda */
 }
 
-.card ul {
+#beneficios .card h4 {
+    color: #0A192F;
+    margin-top: 10px;
+    text-align: left; /* Alinear el subtítulo de cada card a la izquierda */
+}
+
+#beneficios .card ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
+    text-align: left; /* Alinear el contenido de las listas a la izquierda */
 }
 
-.card ul li {
+#beneficios .card ul li {
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Alinear elementos dentro del <li> a la izquierda */
     margin-bottom: 10px;
-    color: #003366; /* Texto en azul oscuro */
+    color: #0A192F;
 }
 
-.card ul li img {
+ .card ul li img.check {
     margin-right: 10px;
+    width: 24px;
+    height: 24px;
 }
-.check{
-    width: 35px;
-    height: 35px;
+
+@media (max-width: 768px) {
+    #beneficios .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #beneficios .card {
+        width: 80%;
+    }
 }
 
 /* Sección de Oferta y CTA */
 .offer {
+    background-color: #1D4ED8;
+    padding: 40px 20px;
     text-align: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden; /* Para contener elementos flotantes */
+}
+
+.secure-purchase{
+    margin-bottom: 8px;
+}
+/* Fondo con líneas abstractas */
+.offer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+    background-size: 50px 50px;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50px); }
 }
 
 .price-box {
     display: inline-block;
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Para que esté por encima del fondo abstracto */
+    max-width: 600px; /* Añadido para limitar el ancho máximo */
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
+/* Precios */
 .old-price, .new-price {
     font-size: 1.5em;
     margin: 10px 0;
@@ -172,93 +267,215 @@ section h2 .highlight-blue {
 
 .old-price span {
     text-decoration: line-through;
-    color: #999;
+    color: #FFFFFF;
 }
 
-.new-price span {
-    color: #ff0000;
+.new-price {
+    font-size: 2em; /* Aumentamos el tamaño de fuente */
+    font-weight: bold;
+    color: #39FF14;
+    position: relative;
+    display: inline-block;
+    /* Añadimos la animación de pulso */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Encabezado adicional */
+.countdown-header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
-.btn-buy {
-    display: inline-block;
-    background-color: #00FF66;
-    color: #000000;
-    padding: 15px 30px;
-    text-decoration: none;
+/* Contador */
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alineación vertical centrada */
+    gap: 15px; /* Espacio entre los bloques */
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada bloque de tiempo */
+.countdown-item {
+    background-color: #1D4ED8; /* Fondo azul intenso */
+    color: #FFFFFF;
+    padding: 15px 10px;
     border-radius: 5px;
-    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra ligera */
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para los números */
+.countdown-item .number {
+    font-size: 2.5em; /* Tamaño grande para destacar */
+    font-weight: bold; /* Fuente gruesa */
+    line-height: 1;
+    margin: 0;
+}
+
+/* Estilos para las etiquetas */
+.countdown-item .label {
+    font-size: 0.8em; /* Tamaño de fuente menor */
+    margin-top: 5px;
+}
+
+/* Efecto de animación flip */
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+    45% {
+        transform: rotateX(-90deg);
+    }
+    55% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* Aplicar la animación cuando cambian los dígitos */
+.countdown-item.animate .number {
+    animation: flip 0.7s ease-in-out;
+}
+
+/* Efecto de sombra para los bloques */
+.countdown-item {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Fin de los cambios en el contador */
+
+/* Botón COMPRAR */
+.btn-buy {
+    display: block; /* Cambiamos a block para que tome todo el ancho */
+    background-color: #39FF14;
+    color: #0A192F;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto 0 auto; /* Centramos el botón y añadimos margen superior */
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+    width: 100%; /* El botón ocupa el 100% del ancho del contenedor padre */
+    max-width: 350px; /* Opcional: Limita el ancho máximo del botón */
+    text-align: center; /* Centra el texto dentro del botón */
 }
 
 .btn-buy:hover {
-    background-color: #ffcc00 ;
+    background-color: #32CD32;
+    transform: scale(1.02);
 }
-
 .secure-purchase {
     font-size: 0.9em;
-    color: #333;
-}
-
-.image-llamada{
-zoom: 1.5;
-
-}
-.offer .soporte {
+    color: #FFFFFF;
     margin-top: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-.offer .soporte a {
-    color: #00FF66;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.offer .soporte img {
-    width: 20px;
+.image-llamada {
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
     margin-right: 5px;
 }
 
-
+.offer .soporte a {
+    color: #39FF14;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
 /* Sección de Presentación del Curso */
 .course-intro {
     text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
 }
 
 .course-intro h2 {
-    font-size: 1.8em;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #0A192F;
+}
+
+.presentacion-parrafo{
+    color: #0A192F;
+    font-weight: 550;
 }
 
 .course-intro p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.course-image {
+    margin-top: 20px;
 }
 
 .course-image img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
 }
 
-.course-intro .btn-buy {
-    margin-bottom: 20px;
+.btn {
+    display: inline-block;
+    background-color: #39FF14;
+    color: #0A192F;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #29a929;
+}
+
+.btn-highlight {
+    background-color: #FFD700;
+    color: #0A192F;
+}
+
+.btn-highlight:hover {
+    background-color: #FFC000;
 }
 
 /* Contenido del Curso */
 #contenido-curso {
-    background-color: #003366; /* Fondo azul oscuro */
-    color: #fff;
-    padding: 60px 0;
+    background-color: #0A192F;
+    color: #FFFFFF;
 }
 
 #contenido-curso h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    color: #FFD700;
 }
 
 #contenido-curso .contenido {
     width: 90%;
     margin: 0 auto;
+    text-align: left;
 }
 
 #contenido-curso .unidad {
@@ -266,41 +483,45 @@ zoom: 1.5;
 }
 
 #contenido-curso h3 {
-    color: #ffcc00; /* Título "Lecciones" en amarillo */
-    font-size: 1.5em;
+    color: #FFD700;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
 #contenido-curso .subtitulo {
-    color: #ffcc00; /* Subtítulos en amarillo */
-    font-size: 1.3em;
+    color: #FFD700;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 #contenido-curso ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 #contenido-curso ul li {
     margin-bottom: 5px;
-    color: #fff;
-}
-
-#contenido-curso .btn-highlight {
-    display: block;
-    background-color: #ffcc00;
-    color: #000000;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 20px auto;
-    width: fit-content;
 }
 
 .prices {
     text-align: center;
     margin-top: 20px;
+}
+
+.prices .btn-highlight {
+    display: inline-block;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 370px; /* Ajusta el ancho máximo para que coincida con el contador regresivo */
+    padding: 15px 0;
+    background-color: #FFD700;
+    color: #0A192F;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold; /* Para asegurar que el texto del botón sea bold */
+    text-decoration: none; /* Elimina el subrayado */
 }
 
 .prices .old-price, .prices .new-price {
@@ -310,206 +531,261 @@ zoom: 1.5;
 
 .prices .old-price span {
     text-decoration: line-through;
-    color: #999;
+    color: #FFFFFF;
 }
 
 .prices .new-price span {
-    color: #ff0000;
+    color: #39FF14;
     font-weight: bold;
 }
 
-#countdown-bottom {
+/* Estilos para cada bloque de tiempo */
+.countdown-item2 {
+    background-color: #f3f3f3; /* Fondo azul intenso */
+    color: #0A192F;
+    font-weight: bold;
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra ligera */
+    text-align: center;
+    width: 60px; /* Ancho fijo para asegurar que todas las cajas sean iguales */
+    position: relative;
+    overflow: hidden;
+    display: inline-block; /* Para mantener las cajas alineadas */
+}
+
+/* #countdown-bottom {
     text-align: center;
     font-size: 2em;
     margin-top: 20px;
-}
+    color: #FFD700;
+} */
 
 /* Sección de Certificado */
 .certificate {
+    background: linear-gradient(180deg, #0A192F 0%, #1B3A60 100%);
     text-align: center;
-}
-.image-certificado-finalizacion{
-    width: 90%;
+    padding: 40px 20px;
 }
 
-.certificate img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+.certificate h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.certificate p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.image-certificado-finalizacion {
+    width: 60%;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
 }
 
 /* Sección de Testimonios */
 .testimonials {
-    background-color: #f4f4f4;
-    padding: 60px 0;
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    color: #1E2A38;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #0A192F;
 }
 
 .testimonials-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
 .testimonial {
-    width: 30%;
-    text-align: center;
-    margin-bottom: 20px;
+    width: 300px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .testimonial img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    border: 2px solid #7E57C2;
 }
 
 .testimonial blockquote {
-    font-style: italic;
     margin: 20px 0;
+    font-style: italic;
+    color: #555555;
 }
 
-.testimonial .user-name {
+.user-name {
     font-weight: bold;
+    background-color: #FFD700;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 /* Bonos de Regalo */
 #bonos {
-    background-color: #003366; /* Fondo azul oscuro */
-    color: #fff;
+    background-color: #000000;
+    padding: 40px 20px;
 }
 
-.image-bono1{
-    width: 100px;
-    height: 100px;
+#bonos h2 {
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 #bonos .bonos-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
 .bono {
-    width: 45%;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #fff;
-    color: #333;
+    background-color: #FFFFFF;
     padding: 20px;
-    box-sizing: border-box;
+    width: 220px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .bono img {
-    max-width: 100%;
-    height: auto;
+    width: 80px;
+    height: 80px;
 }
 
-@media (min-width: 768px) {
-    .bono {
-        width: 22%;
-    }
+.bono h3 {
+    color: #0A192F;
+    margin-top: 10px;
+}
+
+.bono p {
+    color: #0A192F;
+    font-weight: 00;
 }
 
 /* CTA después de la sección de Bonos de Regalo */
 .cta-post-bonos {
     text-align: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
+    padding: 40px 20px;
+    /* background-color: #0A192F; */
 }
 
 .cta-post-bonos .btn-highlight {
-    background-color: #ffcc00;
-    color: #000000;
+    background-color: #FFD700;
+    color: #0A192F;
     padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .cta-post-bonos .btn-highlight:hover {
-    background-color: #00FF66;
+    background-color: #FFC000;
 }
 
 /* Sección del Instructor */
 .instructor {
+    background-color: #0A192F;
+    padding: 35px 40px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 25px;
+    color: #FFFFFF;
 }
 
 .instructor-content {
-    width: 60%;
+    flex: 1;
+    min-width: 300px;
 }
 
 .instructor-content h2 {
-    font-size: 1.8em;
+    background-color: #FFD700;
+    color: #0A192F;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .instructor-content h3 {
-    font-size: 1.5em;
-    color: #003366;
-    margin-top: 10px;
+    font-size: 28px;
+    margin-top: 20px;
 }
 
 .instructor-content p {
-    font-size: 1.1em;
-    margin: 10px 0;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 .instructor-content ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.instructor-content ul ul {
-    list-style: circle;
-    padding-left: 20px;
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 .instructor-image {
-    width: 35%;
+    flex: 1;
+    min-width: 300px;
     text-align: center;
 }
 
 .instructor-image img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
+    border: 2px solid #FFD700;
 }
 
 .instructor-image .btn-highlight {
-    background-color: #ffcc00;
-    color: #333;
+    background-color: #FFD700;
+    color: #0A192F;
     padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
     margin-top: 20px;
     display: inline-block;
+    transition: background-color 0.3s;
 }
 
 .instructor-image .btn-highlight:hover {
-    background-color: #00FF66;
+    background-color: #FFC000;
 }
-
 
 /* Sección de Argumentos */
 .arguments {
-    padding: 25px;
+    background: linear-gradient(180deg, #0A192F 0%, #132b48 100%);
+    padding: 35px 40px;
+    color: #FFFFFF;
 }
 
 .arguments h2 {
-    font-size: 1.8em;
+    font-size: 28px;
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .arguments p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .arguments ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -518,7 +794,10 @@ zoom: 1.5;
 }
 
 .arguments li strong {
-    font-size: 1.2em;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #FFD700;
 }
 
 .arguments li p {
@@ -527,24 +806,16 @@ zoom: 1.5;
 
 /* Preguntas Frecuentes */
 .faq {
-    background-color: #003366;
-    padding: 25px;
-
-}
-.faq-p{
-    background-color: #ffffff;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
+    background-color: #122b50;
+    padding: 40px 20px;
+    color: #FFFFFF;
 }
 
 .faq h2 {
-    font-size: 1.8em;
-    text-align: center;
+    font-size: 28px;
     margin-bottom: 30px;
-    background-color: #f8f8f8;
-    padding: 10px;
-    border-radius: 5px;
+    text-align: center;
+    color: #F0F0F0;
 }
 
 .faq-item {
@@ -552,20 +823,25 @@ zoom: 1.5;
 }
 
 .faq-item h3 {
-    font-size: 1.3em;
-    color: #ffffff;
+    font-size: 22px;
+    background: linear-gradient(180deg, rgba(18, 43, 80, 0.8) 0%, rgba(30, 70, 140, 0.8) 100%);
+    color: #F0F0F0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.faq-item p {
-    font-size: 1.1em;
+.faq-item .faq-p {
+    background-color: #FFFFFF;
+    color: #5d7fb2;
+    padding: 10px;
+    border-radius: 5px;
     margin-top: 5px;
-    color: #003366;
 }
 
 /* Pie de página */
 footer {
     background-color: #04041f;
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
     padding: 20px 0;
 }
@@ -597,43 +873,30 @@ footer .soporte img {
     border-radius: 5px;
     display: none;
     z-index: 1000;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra negra */
-
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 #social-proof.show {
     display: block;
 }
 
-/* Responsivo */
+/* Responsividad */
 @media (max-width: 768px) {
-    /* Beneficios */
-    #beneficios .cards {
+    .benefits-cards, .testimonials-container, .bonuses-cards {
         flex-direction: column;
         align-items: center;
     }
 
-    .card {
-        width: 80%;
-    }
-
-    /* Bonos de Regalo */
-    #bonos .bonos-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bono {
-        width: 80%;
-    }
-
-    /* Instructor */
     .instructor {
         flex-direction: column;
-
     }
 
     .instructor-content, .instructor-image {
+        max-width: 100%;
+    }
+
+    .video-container iframe {
         width: 100%;
+        height: auto;
     }
 }

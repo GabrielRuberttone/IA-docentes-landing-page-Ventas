@@ -1,6 +1,12 @@
 // Función para el contador regresivo
 function countdownTimer(elementId, endTime, duration) {
+    // Seleccionar los elementos de los números dentro del contador
     const countdownElement = document.getElementById(elementId);
+    const daysElement = countdownElement.querySelector('#days');
+    const hoursElement = countdownElement.querySelector('#hours');
+    const minutesElement = countdownElement.querySelector('#minutes');
+    const secondsElement = countdownElement.querySelector('#seconds');
+
     let endDate = new Date(endTime).getTime();
 
     if (isNaN(endDate)) {
@@ -12,6 +18,16 @@ function countdownTimer(elementId, endTime, duration) {
         let now = new Date().getTime();
         let distance = endDate - now;
 
+        if (distance < 0) {
+            clearInterval(x);
+            // Establecer los valores a cero
+            daysElement.textContent = '00';
+            hoursElement.textContent = '00';
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
+            return;
+        }
+
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
         let hours = Math.floor(
             (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -21,27 +37,51 @@ function countdownTimer(elementId, endTime, duration) {
         );
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML =
-            days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+        // Formatear los números para que siempre tengan dos dígitos
+        days = days < 10 ? '0' + days : days;
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        if (distance < 0) {
-            clearInterval(x);
-            // Reiniciar el contador con nueva duración si es necesario
-            // Aquí puedes ajustar la lógica para reiniciar el contador
-            countdownElement.innerHTML = '¡Oferta finalizada!';
+        // Actualizar los valores solo si han cambiado para activar la animación
+        if (daysElement.textContent != days) {
+            daysElement.textContent = days;
+            animateFlip(daysElement.parentElement);
         }
+        if (hoursElement.textContent != hours) {
+            hoursElement.textContent = hours;
+            animateFlip(hoursElement.parentElement);
+        }
+        if (minutesElement.textContent != minutes) {
+            minutesElement.textContent = minutes;
+            animateFlip(minutesElement.parentElement);
+        }
+        if (secondsElement.textContent != seconds) {
+            secondsElement.textContent = seconds;
+            animateFlip(secondsElement.parentElement);
+        }
+
     }, 1000);
 }
 
+// Función para agregar y remover la clase 'animate' para la animación
+function animateFlip(element) {
+    element.classList.add('animate');
+    setTimeout(() => {
+        element.classList.remove('animate');
+    }, 700); // Duración de la animación en milisegundos (coincide con el CSS)
+}
+
 // Configuración del contador en la sección de oferta
-const offerStartTime = 'Oct 8, 2024 12:00:00';
+const offerStartTime = 'Oct 12, 2024 12:00:00';
 const offerDuration = 48 * 60 * 60; // 48 horas en segundos
 countdownTimer('countdown', offerStartTime, offerDuration);
 
-// Configuración del contador en la sección de contenido del curso
-const offerStartTimeBottom = 'Oct 8, 2024 12:00:00';
+// Configuración del contador en la sección de contenido del curso (si existe)
+const offerStartTimeBottom = 'Oct 12, 2024 12:00:00';
 const offerDurationBottom = 48 * 60 * 60; // 48 horas en segundos
 countdownTimer('countdown-bottom', offerStartTimeBottom, offerDurationBottom);
+
 
 // Función para notificaciones de prueba social
 function socialProofNotifications() {
