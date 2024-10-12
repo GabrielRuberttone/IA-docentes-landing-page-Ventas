@@ -1,26 +1,40 @@
+// scripts.js
+
+// Configuración del enlace de checkout de Hotmart
+const checkoutLink = 'https://www.hotmart.com/tu_checkout'; // <-- Aquí ingresa tu enlace de checkout
+
+// Configuración del enlace de WhatsApp
+const whatsappLink = 'https://wa.me/tu-numero-de-whatsapp?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20curso.%20¿Podrías%20ayudarme?'; // <-- Aquí ingresa tu enlace de WhatsApp
+
+// Configuración de la fecha y hora de finalización de la oferta
+const countdownEndTime = '2024-10-12T12:00:00'; // <-- Configura la fecha y hora de finalización de la oferta
+
+// IDs de los contadores en la página
+const countdownIds = ['countdown-top', 'countdown-middle', 'countdown-bottom']; // <-- Asegúrate de que estos IDs coincidan con los del HTML
+
 // Función para el contador regresivo
-function countdownTimer(elementId, endTime, duration) {
-    // Seleccionar los elementos de los números dentro del contador
+function countdownTimer(elementId, endTime) {
+    // Obtener el elemento del contador por su ID
     const countdownElement = document.getElementById(elementId);
-    const daysElement = countdownElement.querySelector('#days');
-    const hoursElement = countdownElement.querySelector('#hours');
-    const minutesElement = countdownElement.querySelector('#minutes');
-    const secondsElement = countdownElement.querySelector('#seconds');
+    if (!countdownElement) return; // Si el elemento no existe, salir de la función
 
-    let endDate = new Date(endTime).getTime();
+    // Seleccionar los elementos de los números dentro del contador usando clases
+    const daysElement = countdownElement.querySelector('.days');
+    const hoursElement = countdownElement.querySelector('.hours');
+    const minutesElement = countdownElement.querySelector('.minutes');
+    const secondsElement = countdownElement.querySelector('.seconds');
 
-    if (isNaN(endDate)) {
-        // Si no se proporciona una fecha válida, usar tiempo actual + duración
-        endDate = new Date().getTime() + duration * 1000;
-    }
+    // Verificar que todos los elementos existen
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement) return;
 
+    // Función que actualiza el contador cada segundo
     let x = setInterval(function() {
         let now = new Date().getTime();
-        let distance = endDate - now;
+        let distance = endTime - now;
 
         if (distance < 0) {
             clearInterval(x);
-            // Establecer los valores a cero
+            // Establecer los valores a cero si el tiempo se ha agotado
             daysElement.textContent = '00';
             hoursElement.textContent = '00';
             minutesElement.textContent = '00';
@@ -28,6 +42,7 @@ function countdownTimer(elementId, endTime, duration) {
             return;
         }
 
+        // Cálculos de tiempo
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
         let hours = Math.floor(
             (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -43,45 +58,48 @@ function countdownTimer(elementId, endTime, duration) {
         minutes = minutes < 10 ? '0' + minutes : minutes;
         seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        // Actualizar los valores solo si han cambiado para activar la animación
-        if (daysElement.textContent != days) {
-            daysElement.textContent = days;
-            animateFlip(daysElement.parentElement);
-        }
-        if (hoursElement.textContent != hours) {
-            hoursElement.textContent = hours;
-            animateFlip(hoursElement.parentElement);
-        }
-        if (minutesElement.textContent != minutes) {
-            minutesElement.textContent = minutes;
-            animateFlip(minutesElement.parentElement);
-        }
-        if (secondsElement.textContent != seconds) {
-            secondsElement.textContent = seconds;
-            animateFlip(secondsElement.parentElement);
-        }
+        // Actualizar los valores en el contador
+        daysElement.textContent = days;
+        hoursElement.textContent = hours;
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
 
     }, 1000);
 }
 
-// Función para agregar y remover la clase 'animate' para la animación
-function animateFlip(element) {
-    element.classList.add('animate');
-    setTimeout(() => {
-        element.classList.remove('animate');
-    }, 700); // Duración de la animación en milisegundos (coincide con el CSS)
+// Inicializar todos los contadores
+function initCountdowns() {
+    // Convertir la fecha de finalización a milisegundos
+    const endTime = new Date(countdownEndTime).getTime();
+
+    // Inicializar cada contador por su ID
+    countdownIds.forEach(elementId => {
+        countdownTimer(elementId, endTime);
+    });
 }
 
-// Configuración del contador en la sección de oferta
-const offerStartTime = 'Oct 12, 2024 12:00:00';
-const offerDuration = 48 * 60 * 60; // 48 horas en segundos
-countdownTimer('countdown', offerStartTime, offerDuration);
+// Llamar a la función para iniciar los contadores
+initCountdowns();
 
-// Configuración del contador en la sección de contenido del curso (si existe)
-const offerStartTimeBottom = 'Oct 12, 2024 12:00:00';
-const offerDurationBottom = 48 * 60 * 60; // 48 horas en segundos
-countdownTimer('countdown-bottom', offerStartTimeBottom, offerDurationBottom);
+// Asignar el enlace a todos los botones con la clase 'btn-checkout'
+function assignCheckoutLinks() {
+    const checkoutButtons = document.querySelectorAll('.btn-checkout');
+    checkoutButtons.forEach(button => {
+        button.setAttribute('href', checkoutLink);
+    });
+}
 
+// Asignar el enlace a todos los elementos con la clase 'whatsapp-link'
+function assignWhatsAppLinks() {
+    const whatsappElements = document.querySelectorAll('.whatsapp-link');
+    whatsappElements.forEach(element => {
+        element.setAttribute('href', whatsappLink);
+    });
+}
+
+// Llamar a las funciones para asignar los enlaces
+assignCheckoutLinks();
+assignWhatsAppLinks();
 
 // Función para notificaciones de prueba social
 function socialProofNotifications() {
