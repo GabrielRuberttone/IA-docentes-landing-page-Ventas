@@ -17,6 +17,7 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+
 p {
     margin: 0;
 }
@@ -62,13 +63,14 @@ img {
     color: #000000; /* Color negro para el texto principal del H1 */
     padding: 20px;
     margin: 0;
+    
 }
 
 .subtitle {
     font-size: 20px;
     color: #000000; /* Color negro para el subtítulo */
     padding: 10px;
-    font-weight: 450;
+    font-weight: 500;
 }
 
 /* ============================
@@ -257,7 +259,7 @@ section h3 {
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
 }
 
@@ -350,6 +352,8 @@ section h3 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
+
+
 /* ============================
    Botones Generales
 ============================ */
@@ -357,9 +361,9 @@ section h3 {
     display: inline-block;
     background-color: #39FF14;
     color: #0A192F;
-    padding: 15px 60px;
+    padding: 15px 30px;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
     transition: background-color 0.3s, transform 0.3s;
@@ -576,7 +580,7 @@ section h3 {
 }
 
 .image-certificado-finalizacion {
-    width: 60%;
+    width: 80%;
     border: 2px solid #FFD700;
     border-radius: 10px;
 }
