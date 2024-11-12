@@ -1,13 +1,13 @@
 // scripts.js
 
 // Configuración del enlace de checkout de Hotmart
-const checkoutLink = 'https://www.hotmart.com/tu_checkout'; // <-- Aquí ingresa tu enlace de checkout
+const checkoutLink = 'https://pay.hotmart.com/H88956778Q?off=c6rapbhn&checkoutMode=10&ref=D90448761P&bid=1731450610053'; // <-- Aquí ingresa tu enlace de checkout
 
 // Configuración del enlace de WhatsApp
-const whatsappLink = 'https://wa.me/tu-numero-de-whatsapp?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20curso.%20¿Podrías%20ayudarme?'; // <-- Aquí ingresa tu enlace de WhatsApp
+const whatsappLink = 'https://wa.me/5491124698794?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20curso.%20¿Podrías%20ayudarme?'; // <-- Aquí ingresa tu enlace de WhatsApp
 
 // Configuración de la fecha y hora de finalización de la oferta
-const countdownEndTime = '2024-10-13T12:00:00'; // <-- Configura la fecha y hora de finalización de la oferta
+const countdownEndTime = '2024-11-15T12:00:00'; // <-- Configura la fecha y hora de finalización de la oferta
 
 // IDs de los contadores en la página
 const countdownIds = ['countdown-top', 'countdown-middle', 'countdown-bottom']; // <-- Asegúrate de que estos IDs coincidan con los del HTML
