@@ -36,15 +36,23 @@
           atrás. Prepárate para transformar tu enfoque pedagógico y potenciar tu
           enseñanza con la innovación de la IA.
         </p>
-        <!-- Video de YouTube -->
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/xyOmJh0h9-E?si=vLXRkCWoVn-ApQPf"
-            title="YouTube video player"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
+       <!-- Video de YouTube -->
+<div class="video-container" id="youtube-video" style="position: relative; cursor: pointer;">
+  <!-- Imagen de vista previa (thumbnail) -->
+  <img src="https://img.youtube.com/vi/xyOmJh0h9-E/hqdefault.jpg" alt="Thumbnail del video" style="width: 100%; height: auto;">
+  
+  <!-- Icono de play sobre el thumbnail -->
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: white;">
+      ▶️
+  </div>
+</div>
+
+<script>
+  document.getElementById('youtube-video').addEventListener('click', function () {
+      // Reemplaza el contenedor del thumbnail con el reproductor de YouTube
+      this.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/xyOmJh0h9-E?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  });
+</script>
       </div>
     </header>
 
